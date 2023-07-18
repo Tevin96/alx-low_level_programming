@@ -6,13 +6,18 @@
 int main(void)
 {
 int i = 'a';
-	
-while (i <= 'z')
+int j = 'z';
+
+while (i <= j)
 {
-if (i == 'e' || i == 'q')
-putchar(i);
-i++;
+	if (i == 'e' || i == 'q')
+	{
+		i++;
+		continue;
+	}
+	putchar(i);
+	i++;
 }
 putchar('\n');
 return (0);
-}	 
+}
