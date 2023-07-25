@@ -1,7 +1,6 @@
-#include "main.h"
 #include <stdio.h>
 /**
- *main - a program that prints 1 to 100, for multiples of three
+ *main - a program that prints FizzBuzz
  *Return: 0 (Success)
  */
 int main(void)
