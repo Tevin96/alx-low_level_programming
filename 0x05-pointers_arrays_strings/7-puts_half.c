@@ -2,7 +2,6 @@
 /**
  *  puts_half - a function that prints half of a string
  *  @str: input
- *  Return: length
  */
 void puts_half(char *str)
 {
@@ -13,5 +12,12 @@ while (*str != '\0')
 len++;
 str++;
 }
-return (len);
+
+str -= (len / 2);
+while (*str != '\0')
+{
+_putchar(*str);
+str++;
+}
+_putchar('\n');
 }
