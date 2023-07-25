@@ -15,7 +15,7 @@ i = -i;
 }
 
 if ((i / 10) > 0)
-print_number(1 / 10);
+print_number(i / 10);
 _putchar((i % 10) + '0');
 }
 
