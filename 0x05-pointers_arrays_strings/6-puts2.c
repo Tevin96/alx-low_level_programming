@@ -3,7 +3,7 @@
  * puts2  - a function that prints every other character of a string
  * starting with the first character
  * @str: input
- * Return: void
+ * Return: print
  */
 void puts2(char *str)
 {
