@@ -6,12 +6,10 @@
 */
 int _atoi(char *s)
 {
-int i, j, m, n;
-
-i = 0;
-j = 0;
-m = 1;
-n = 0;
+int i = 0;
+int j = 0;
+int m = 1;
+int n = 0;
 
 while (s[i])
 {
