@@ -7,12 +7,10 @@
  * size_r: buffer size
  * Return: 0 (Success)
  */
-char *infinite_add(char *n1, char *n2, char *r, int size_r);
+char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i, j;
-
-	int o= 0, i = 0, j = 0, d = 0;
-	int v = 0, v2 = 0, t = 0;
+	int o = 0, i = 0, j = 0, d = 0;
+	int v1 = 0, v2 = 0, t = 0;
 
 	while (*(n1 + i) != '\0')
 		i++;
@@ -47,6 +45,5 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r);
 	if (d == size_r)
 		return (0);
 	*(r + d) = '\0';
-	rev_string(r);
 	return (r);
 }
