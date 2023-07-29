@@ -2,14 +2,14 @@
 /**
  * rot13 - a function that encodes a string using rot13
  * @str: string
- * Returrn: str
+ * Return: str
  */
 char *rot13(char *str)
 {
 	int a, b;
 
 	char s1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char srot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	char rot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	for (a = 0; str[a] != '\0'; a++)
 	{
@@ -17,7 +17,7 @@ char *rot13(char *str)
 		{
 			if (str[a] == s1[b])
 			{
-				str[a] = srot[b];
+				str[a] = rot[b];
 				break;
 			}
 		}
