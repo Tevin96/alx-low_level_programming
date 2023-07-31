@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - finds and prints the first 98 Fibonacci numbers
- * Return: 0 (Success)
+ * Return: Always 0.
  */
 int main(void)
 {
@@ -13,7 +13,7 @@ unsigned long half1, half2;
 for (i = 0; i < 92; i++)
 {
 sum = a1 + a2;
-printf("%lu, ", sum);
+printf("%lu", sum);
 a1 = a2;
 a2 = sum;
 }
