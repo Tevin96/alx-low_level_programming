@@ -6,41 +6,30 @@
 int main(void)
 {
 int i;
-unsigned long a1 = 0, a2 = 1, sum;
-unsigned long a1_half1, a1_half2, a2_half1, a2_half2;
-unsigned long half1, half2;
+unsigned long int a1 = 0, b1 = 1, a2 = 0, b2 = 2;
+unsigned long c1, c2, c3;
 
-for (i = 0; i < 92; i++)
-{
-sum = a1 + a2;
-printf("%lu, ", sum);
-a1 = a2;
-a2 = sum;
-}
-a1_half1 = a1 / 10000000000;
-a2_half1 = a2 / 10000000000;
-a1_half2 = a1 % 10000000000;
-a2_half2 = a2 % 10000000000;
-for (i = 93; 1 < 99; i++)
-{
-half1 = a1_half1 + a2_half1;
-half2 = a1_half2 + a2_half2;
-if (a1_half2 + a2_half2 > 9999999999)
-{
-half1 += 1;
-half2 %= 10000000000;
-}
-printf("%lu%lu", half1, half2);
-if (i != 98)
-{
-printf(", ");
-break;
-}
-a1_half1 = a2_half1;
-a1_half2 = a2_half2;
-a2_half1 = half1;
-a2_half2 = half2;
-}
-printf("\n");
-return (0);
+printf("%lu, %lu, ", b1, b2);
+	for (i = 2; i < 98; i++)
+	{
+		if (b1 + b2 > 10000000000 || a2 > 0 || a1 > 0)
+		{
+			c1 = (b1 + b2) / 10000000000;
+			c2 = (b1 + b2) % 10000000000;
+			c3 = a1 + a2 + c1;
+			a1 = a2, a2 = c3;
+			b1 = b2, b2 = c2;
+			printf("%lu%010lu", a2, b2);
+		}
+		else
+		{
+			c2 = b1 + b2;
+			b1 = b2, b2 = c2;
+			printf("%lu", b2);
+		}
+		if (i != 97)
+			printf(", ");
+	}
+	printf("\n");
+	return (0);
 }
