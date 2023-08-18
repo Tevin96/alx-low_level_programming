@@ -3,22 +3,25 @@
 #include <stdlib.h>
 
 /**
- * main - multiplies two numbers
+ * main - a program that multiplies two numbers
  * @argc: number
  * @argv: array
- * Return: 1 if receive two arguements 0 otherwise
+ * Return: 1 if program does not receive two arguements
  */
 int main(int argc, char *argv[])
 {
-	int a, b;
+	int a = 0, b = 0;
 
-	if (argc == 1)
+	if (argc == 3)
 	{
-		printf("Error\n");
-		return (1);
-	}
 	a = atoi(argv[1]);
 	b = atoi(argv[2]);
 	printf("%d\n", a * b);
-		return (0);
+	}
+	else
+	{
+		printf("Error\n");
+	return (1);
+	}
+	return (0);
 }
