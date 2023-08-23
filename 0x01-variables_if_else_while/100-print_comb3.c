@@ -1,33 +1,26 @@
 #include <stdio.h>
 /**
- *main-
+ *main- nts all possible different combinations of two digits
  *Return: 0 (Success)
  */
 int main(void)
 {
-	int i = '0';
-	int j = '0';
+	int a, b;
 
-	while (i <= '9')
-		(j <= '9')
+	for (a = 0; a < 10; a++)
+	{
+		for (b = a + 1; b < 10; b++)
 		{
-			if (!(i > j) || i == j)
-				putcher(i);
-			putcher(j);
-			if (i == '8' && j == '9'
+			putchar(a + '0');
+			putchar(b + '0');
+
+			if (a < 8)
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
-		else
-		{
-		putchar(',');
-		putchar(' ');
-		}
-		{
-		j++;
-		j = '0';
-		1++;
-		j = '0'
-		i++;
-		}
-		return (0);
+	}
+	putchar('\n');
+	return (0);
 }
-					
