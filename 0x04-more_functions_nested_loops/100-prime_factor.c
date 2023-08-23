@@ -12,7 +12,7 @@ long int c = 612852475143;
 
 for (i = 2; i < c; i++)
 {
-if (s % i == 0)
+if (c % i == 0)
 {
 c /= i;
 }
