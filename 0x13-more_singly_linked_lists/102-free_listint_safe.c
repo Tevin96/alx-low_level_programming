@@ -8,7 +8,7 @@
 size_t loop_listint_free(const listint_t *head)
 {
 	const listint_t *loop, *list;
-	size_t c;
+	size_t c = 1;
 
 	if (!head || !head->next)
 		return (0);
@@ -53,7 +53,7 @@ size_t loop_listint_free(const listint_t *head)
 size_t free_listint_safe(listint_t **h)
 {
 	listint_t *safe;
-	size_t a, c = 0;
+	size_t c, a;
 
 	c = loop_listint_free(*h);
 
