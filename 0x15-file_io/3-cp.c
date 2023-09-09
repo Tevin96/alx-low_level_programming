@@ -1,7 +1,4 @@
 #include "main.h"
-#include <stdio.h>
-
-void copy_file_from_to(const char *file_from, const char *file_to);
 
 /**
  * main - copies the content of a file to another file
@@ -31,7 +28,7 @@ int main(int argc, char *argv[])
 	{
 		write_file = write(fd_file_to, buffer, read_file);
 		if (write_file == -1)
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 	}
 	if (read_file == -1)
 	{
