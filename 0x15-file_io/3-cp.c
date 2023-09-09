@@ -1,6 +1,7 @@
 #include "main.h"
-#include <stdlib.h>
 #include <stdio.h>
+
+void copy_file_from_to(const char *file_from, const char *file_to);
 
 /**
  * main - copies the content of a file to another file
