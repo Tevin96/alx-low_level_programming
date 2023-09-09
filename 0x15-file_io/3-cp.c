@@ -1,15 +1,17 @@
 #include "main.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
  * main - copies the content of a file to another file
  * @argc: number of arguments
  * @argv: array
+ * @fd: file descriptor
  * Return: 0 (success)
  */
 int main(int argc, char *argv[])
 {
-	int fd_file_from, fd_file_to;
-	int read_file, write_file;
+	int fd_file_from, fd_file_to, read_file, write_file;
 	char buffer[1024];
 
 	if (argc != 3)
